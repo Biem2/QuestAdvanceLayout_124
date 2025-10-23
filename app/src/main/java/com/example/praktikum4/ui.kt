@@ -36,8 +36,8 @@ fun ActivitasPertama(modifier: Modifier) {
     ) {
         Text(
             text = stringResource(id = R.string.prodi),
-            fontSize = 35.sp,
-            fontWeight = FontWeight.Bold
+            fontSize = 45.sp,
+            fontWeight = FontWeight.Light
         )
         Text(
             text = stringResource(id = R.string.univ),
