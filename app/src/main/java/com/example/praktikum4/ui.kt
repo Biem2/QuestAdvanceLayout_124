@@ -56,7 +56,7 @@ fun ActivitasPertama(modifier: Modifier){
         colors = CardDefaults.cardColors(
             containerColor = Color.DarkGray
         )
-    ){
+    ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.padding(10.dp)
@@ -78,7 +78,7 @@ fun ActivitasPertama(modifier: Modifier){
                     color = Color.White,
                     modifier = Modifier.padding(top = 15.dp)
                 )
-                Text (
+                Text(
                     stringResource(R.string.alamat),
                     fontSize = 20.sp,
                     color = Color.Yellow,
@@ -87,4 +87,14 @@ fun ActivitasPertama(modifier: Modifier){
             }
         }
     }
-}
+    Spacer(modifier = Modifier.height(height = 25.dp))
+
+    Card(
+        modifier = Modifier
+            .height(160.dp)
+            .fillMaxWidth(fraction = 1f)
+            .padding(all = 12.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = Color.Blue
+    )
+){
