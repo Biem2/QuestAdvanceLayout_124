@@ -1,5 +1,6 @@
 package com.example.praktikum4
 
+import android.inputmethodservice.Keyboard
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,38 +23,46 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.LineHeightStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 
+
 @Composable
-fun ActivitasPertama(modifier: Modifier) {
-    Column(
-        modifier = Modifier
-            .padding(top = 200.dp)
-            .fillMaxSize(),
+fun ActivitasPertama(modifier: Modifier){
+    Column(modifier= Modifier
+        .padding(top=100.dp)
+        .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
-    ) {
+    ){
         Text(
-            text = stringResource(id = R.string.prodi),
-            fontSize = 45.sp,
-            fontWeight = FontWeight.Light
+            text = stringResource(id= R.string.prodi),
+            fontSize = 35.sp,
+            fontWeight = FontWeight.Bold
         )
+
         Text(
             text = stringResource(id = R.string.univ),
             fontSize = 22.sp
         )
+
         Spacer(modifier = Modifier.height(height = 25.dp))
+
         Card(
             modifier = Modifier
+                .height(160.dp)
                 .fillMaxWidth(fraction = 1f)
                 .padding(all = 12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.Green
+                containerColor = Color.DarkGray
             )
-        ) {
-            Row() {
-                val gambar = painterResource(id = R.drawable.jempol)
+        ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(10.dp)
+            ) {
+                val gambar = painterResource(id = R.drawable.umypunya)
                 Image(
                     painter = gambar,
                     contentDescription = null,
@@ -61,36 +70,131 @@ fun ActivitasPertama(modifier: Modifier) {
                         .size(size = 100.dp)
                         .padding(all = 5.dp)
                 )
+
                 Spacer(modifier = Modifier.width(width = 30.dp))
                 Column() {
                     Text(
                         text = stringResource(id = R.string.nama),
-                        fontSize = 45.sp,
-                        fontFamily = FontFamily.Monospace,
+                        fontSize = 30.sp,
+                        fontFamily = FontFamily.Cursive,
                         color = Color.White,
                         modifier = Modifier.padding(top = 15.dp)
                     )
-                    Text(
+                    Text (
                         stringResource(R.string.alamat),
                         fontSize = 20.sp,
-                        color = Color.Blue,
+                        color = Color.Yellow,
                         modifier = Modifier.padding(top = 10.dp)
                     )
                 }
             }
         }
+        Spacer(modifier = Modifier.height(height = 25.dp))
+
+        Card(
+            modifier = Modifier
+                .height(160.dp)
+                .fillMaxWidth(fraction = 1f)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.Blue
+            )
+        ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(10.dp)
+            ){
+                val gambar = painterResource(id = R.drawable.umypunya)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 5.dp)
+                )
+
+                Spacer(modifier = Modifier.width(width = 30.dp))
+                Column() {
+                    Text(
+                        text = stringResource(id = R.string.nama),
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text (
+                        stringResource(R.string.Nim),
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text (
+                        stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                }
+            }
+        }
+        Spacer(modifier = Modifier.height(height = 25.dp))
+        Card(
+            modifier = Modifier
+                .height(160.dp)
+                .fillMaxWidth(fraction = 1f)
+                .padding(all = 12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = Color.Red
+            )
+        ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(10.dp)
+            ){
+                val gambar = painterResource(id = R.drawable.umypunya)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .padding(all = 5.dp)
+                )
+
+                Spacer(modifier = Modifier.width(width = 30.dp))
+                Column() {
+                    Text(
+                        text = stringResource(id = R.string.nama),
+                        fontSize = 25.sp,
+                        fontFamily = FontFamily.Cursive,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 15.dp)
+                    )
+                    Text (
+                        stringResource(R.string.Nim),
+                        fontSize = 20.sp,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text (
+                        stringResource(R.string.alamat),
+                        fontSize = 20.sp,
+                        color = Color.Yellow,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                }
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+        ){
+            Text(
+                stringResource(R.string.copy),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(bottom = 50.dp)
+            )
+        }
     }
-
-Box(
-modifier = Modifier
-.fillMaxSize()
-) {
-    Text(
-        stringResource(R.string.copy),
-        modifier = Modifier
-            .align(Alignment.BottomCenter)
-            .padding(bottom = 55.dp)
-    )
-}}
-
-
+}
