@@ -57,3 +57,16 @@ fun ActivitasPertama(modifier: Modifier){
             containerColor = Color.DarkGray
         )
     ){
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(10.dp)
+        ) {
+            val gambar = painterResource(id = R.drawable.umypunya)
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(size = 100.dp)
+                    .padding(all = 5.dp)
+            )
+    }
