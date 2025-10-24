@@ -162,6 +162,58 @@ fun ActivitasPertama(modifier: Modifier){
             containerColor = Color.Red
         )
     ){
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(10.dp)
+        ){
+            val gambar = painterResource(id = R.drawable.umypunya)
+            Image(
+                painter = gambar,
+                contentDescription = null,
+                modifier = Modifier
+                    .size(size = 100.dp)
+                    .padding(all = 5.dp)
+            )
+
+            Spacer(modifier = Modifier.width(width = 30.dp))
+            Column() {
+                Text(
+                    text = stringResource(id = R.string.nama),
+                    fontSize = 25.sp,
+                    fontFamily = FontFamily.Cursive,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 15.dp)
+                )
+                Text (
+                    stringResource(R.string.Nim),
+                    fontSize = 20.sp,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 10.dp)
+                )
+                Text (
+                    stringResource(R.string.alamat),
+                    fontSize = 20.sp,
+                    color = Color.Yellow,
+                    modifier = Modifier.padding(top = 10.dp)
+                )
+            }
+        }
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+    ){
+        Text(
+            stringResource(R.string.copy),
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 50.dp)
+        )
+    }
+}
+
+
 
 
 
